@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-65)ww^!qb(w_(2mb!m$3r^la9&jdxx1_2%q0_&n8k5&onj-kyi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -115,7 +115,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 # Static settings
 STATICFILES_DIRS = [BASE_DIR / "portfolio/static"]
 
@@ -123,3 +123,7 @@ STATICFILES_DIRS = [BASE_DIR / "portfolio/static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
